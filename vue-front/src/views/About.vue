@@ -1,5 +1,7 @@
 <template>
-  <div class="about">
-    <h1>This is an about page</h1>
+  <div class="login">
+    <mt-field label="用户名" placeholder="请输入用户名" v-model="username"></mt-field>
+    <mt-field label="密码" placeholder="请输入密码" type="password" v-model="password"></mt-field>
+    <mt-button type="primary" @click.native="handleClick">登录</mt-button>
   </div>
 </template>
