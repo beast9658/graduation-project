@@ -19,8 +19,6 @@
 </template>
 
 <script>
-import Search from '@/components/search.vue'
-
 export default {
   name: 'gamelist',
   data () {
@@ -46,9 +44,6 @@ export default {
         id: '001' }
     ]
     }
-  },
-  components: {
-    Search
   },
   methods: {
   }

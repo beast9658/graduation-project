@@ -42,6 +42,22 @@ export default new Router({
       meta: {
         footerShow:false
       }
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: () => import('./views/login.vue'),
+      meta: {
+        footerShow:false
+      }
+    },
+    {
+      path: '/gamesearch',
+      name: 'gamesearch',
+      component: () => import('./views/gameSearch.vue'),
+      meta: {
+        footerShow:false
+      }
     }
   ]
 })
