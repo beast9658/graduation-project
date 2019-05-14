@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view class="view"/>
     <Footer id="vfooter" v-if="$route.meta.footerShow"></Footer>
   </div>
 </template>
@@ -25,5 +25,10 @@ export default {
   color: #2c3e50;
   padding: 0;
   margin: 0;
+}
+.view::after {
+  content : '';
+  height : 50px;
+  display :block;
 }
 </style>

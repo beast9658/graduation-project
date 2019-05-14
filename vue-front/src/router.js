@@ -58,6 +58,14 @@ export default new Router({
       meta: {
         footerShow:false
       }
+    },
+    {
+      path: '/gamescore',
+      name: 'gamescore',
+      component: () => import('./views/gameScore.vue'),
+      meta: {
+        footerShow:false
+      }
     }
   ]
 })

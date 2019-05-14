@@ -7,6 +7,7 @@
         <div class="name">{{name}}</div>
       </div>
     </div>
+    <mt-cell title="战绩信息" is-link :to="{path:'/gamescore'}"></mt-cell>
   </div>
 </template>
 
@@ -26,6 +27,7 @@ export default {
   width: 100%;
   height: 40vh;
   overflow: hidden;
+  margin-bottom: 1rem;
 }
 .bg {
   width: 100%;

@@ -48,5 +48,18 @@ export default {
 .list-item {
   width: 50%;
   float: left;
+  overflow: hidden;
+  text-align: center;
+}
+.list-item img {
+  width: 100%;
+  height: 100%;
+}
+.list::after {
+  float: left;
+  width: 100%;
+  content : '';
+  height : 50px;
+  display :block;
 }
 </style>
