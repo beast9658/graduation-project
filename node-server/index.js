@@ -2,34 +2,19 @@ const express = require("express")
 
 const app = express()
 
+const mongoose =require('mongoose')
+mongoose.connect('mongodb://localhost:27017/server', { useNewUrlParser: true })
+const List = mongoose.model('List', new mongoose.Schema({
+    src:String,
+    title:String
+}))
+
+
 app.use(require('cors')())
 app.use(express.static('public'))
 
-app.get('/api/gamelist', function(req, res){
-  res.send(
-    [
-      {
-        src:'http://localhost:3000/img/logo.png',
-        title:"001"
-      },
-      {
-        src:'http://localhost:3000/img/logo.png',
-        title:'002'
-      },
-      {
-        src:'http://localhost:3000/img/logo.png',
-        title:'011'
-      },
-      {
-        src:'http://localhost:3000/img/logo.png',
-        title:'101'
-      },
-      {
-        src:'http://localhost:3000/img/logo.png',
-        title:'111'
-      }
-    ]
-  )
+app.get('/api/gamelist', async function(req, res){
+  res.send(await List.find())
 }),
 app.get('/api/gameview', function(req, res){
   res.send(
