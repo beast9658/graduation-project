@@ -8,11 +8,11 @@
         id="gamelist"
         v-for="(item,index) in items"
         :key="index"
-        title="标题文"
+        :title="item.title"
         lable="45"
         :to="{path:'/gamedetail',query:{id:index}}">
-        <img slot="icon" src="../assets/logo.png" width="100" height="100">
-        {{ index }}:{{ item.message }}:{{ item.id }}
+        <img slot="icon" :src="item.src" width="100" height="100">
+        {{ item.message }}
       </mt-cell>
     </div>
   </div>
@@ -23,29 +23,12 @@ export default {
   name: 'gamelist',
   data () {
     return {
-      items: [
-      { message: 'Foo',
-        id: '001' },
-      { message: 'Bar',
-        id: '002' },
-      { message: 'Foo',
-        id: '001' },
-      { message: 'Foo',
-        id: '001' },
-      { message: 'Bar',
-        id: '002' },
-      { message: 'Foo',
-        id: '001' },
-      { message: 'Foo',
-        id: '001' },
-      { message: 'Bar',
-        id: '002' },
-      { message: 'Foo',
-        id: '001' }
-    ]
+      items: []
     }
   },
-  methods: {
+  mounted () {
+    this.$axios.get('http://localhost:3000/api/gameview')
+    .then(response => (this.items = response.data))
   }
 }
 </script>

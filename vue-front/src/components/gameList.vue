@@ -12,33 +12,15 @@
 export default {
   data () {
     return {
-      items: [
-        {
-          src:require('../assets/logo.png'),
-          title:'001'
-        },
-        {
-          src:require('../assets/logo.png'),
-          title:'002'
-        },
-        {
-          src:require('../assets/logo.png'),
-          title:'011'
-        },
-        {
-          src:require('../assets/logo.png'),
-          title:'101'
-        },
-        {
-          src:require('../assets/logo.png'),
-          title:'111'
-        },
-      ]
+      items: []
     }
+  },
+  mounted () {
+    this.$axios.get('http://localhost:3000/api/gamelist')
+    .then(response => (this.items = response.data))
   }
 }
 </script>
-
 
 <style scoped>
 .list {

@@ -5,10 +5,13 @@ import store from './store'
 import './registerServiceWorker'
 import MintUI from 'mint-ui'
 import 'mint-ui/lib/style.css'
+import axios from 'axios'
 
 Vue.config.productionTip = false
 
+
 Vue.use(MintUI)
+Vue.prototype.$axios = axios
 
 new Vue({
   router,
