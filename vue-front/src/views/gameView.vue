@@ -10,7 +10,7 @@
         :key="index"
         :title="item.title"
         lable="45"
-        :to="{path:'/gamedetail',query:{id:index}}">
+        :to="{path:'/gamedetail',query:{index: index}}">
         <img slot="icon" :src="item.src" width="100" height="100">
         {{ item.message }}
       </mt-cell>

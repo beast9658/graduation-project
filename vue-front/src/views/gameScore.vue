@@ -9,12 +9,12 @@
       </div>
     </div>
     <div class="score" v-for="(item,index) in items" :key="index">
-      <div>
-        <p>{{ item.title }}</p>
+      <div @click="change(item)">
+        <p class="d-title">{{ item.title }}</p>
       </div>
-      <div v-if="isclick">
-        <img src="" alt="">
-        <p>K:{{ item.k }}D:{{ item.d }}A:{{ item.a }}</p>
+      <div v-if="item.show" @click="close(item)">
+        <img :src=item.src alt="" class="s-img">
+        <p class="d-score">K:{{ item.k }} D:{{ item.d }} A:{{ item.a }}</p>
       </div>
     </div>
   </div>
@@ -30,12 +30,31 @@ export default {
   data () {
     return {
       name:"4ds8a94d",
-      isclick:false
+      items: [
+        {
+          title:"001",
+          k:"10",
+          d:"10",
+          a:"5",
+          src:"http://localhost:3000/img/logo.png",
+          show:false
+        },
+        {
+          title:"0101",
+          k:"110",
+          d:"110",
+          a:"51",
+          show:false
+        }
+      ]
     }
   },
   methods: {
-    change() {
-      this.isclick=!this.isclick
+    change(item) {
+      item.show=!item.show
+    },
+    close(item) {
+      item.show=false
     }
   }
   
@@ -83,5 +102,25 @@ export default {
   right: 0;
   top: 8rem;
   margin: 0 auto;
+}
+.s-img {
+  width:6em;
+  height:8em;
+}
+.d-title {
+  color: blue;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.d-detail {
+  position: relative;
+  float: right;
+}
+.d-score {
+  float: right;
+  position: relative;
+  right: 3rem;
+  top: 1rem;
+  font-size: 2rem;
 }
 </style>

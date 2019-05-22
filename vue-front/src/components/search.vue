@@ -14,22 +14,17 @@ export default {
   data () {
     return {
       value: '',
-      defaultResult: [
-        'Apple',
-        'Banana',
-        'Orange',
-        'Durian',
-        'Lemon',
-        'Peach',
-        'Cherry',
-        'Berry'
-      ]
+      defaultResult: []
     }
   },
   computed: {
     filterResult() {
       return this.defaultResult.filter(value => new RegExp(this.value, 'i').test(value))
     }
+  },
+  mounted () {
+    this.$axios.get('http://localhost:3000/api/gameview')
+    .then(response => (this.defaultResult = response.data.title))
   }
 }
 </script>

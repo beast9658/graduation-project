@@ -2,13 +2,13 @@
   <div>
     <div class="bg"></div>
     <PrePage></PrePage>
-    <div class="detail">
+    <div class="detail" v-for="(message,index) in messages" :key="index">
       <!-- {{ this.$route.query.id }} -->
       <div class="banner">
         <div class="banner-img"></div>
         <div class="banner-mes">
           <div>时间:{{ message.time }}</div>
-          <div>作者:{{ message.author }}{{ message.id }}</div>
+          <div>作者:{{ message.author }}{{ message.index }}</div>
           <div>tag:{{ message.tag }}</div>
         </div>
       </div>
@@ -28,14 +28,12 @@ export default {
   },
   data () {
     return {
-      mId : this.$route.query.id,
-      message:[]
+      messages:[]
     }
   },
   mounted () {
-    this.$axios
-    .get('http://localhost:3000/api/gamedetail')
-    .then(response => (this.message = response.data))
+    this.$axios.get('http://localhost:3000/api/gamedetail/:index')
+    .then(response => (this.messages = response.data))
   }
 }
 </script>
