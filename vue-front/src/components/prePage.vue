@@ -17,8 +17,7 @@ export default {
   width: 2rem;
   height: 2rem;
   border-radius: 50%;
-  background-color: red;
-  background-image: url(../assets/logo.png);
+  background-image: url(http://localhost:3000/img/back.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
   position: fixed;

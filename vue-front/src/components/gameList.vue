@@ -34,8 +34,8 @@ export default {
   text-align: center;
 }
 .list-item img {
-  width: 100%;
-  height: 100%;
+  width: 10rem;
+  height: 8rem;
 }
 .list::after {
   float: left;

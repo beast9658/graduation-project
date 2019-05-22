@@ -1,9 +1,9 @@
 <template>
   <div class="home">
     <mt-swipe class="swipe">
-      <mt-swipe-item><img src="../assets/logo.png" alt=""></mt-swipe-item>
-      <mt-swipe-item><img src="../assets/logo.png" alt=""></mt-swipe-item>
-      <mt-swipe-item><img src="../assets/logo.png" alt=""></mt-swipe-item>
+      <mt-swipe-item><img src="http://localhost:3000/img/hs001.jpg" alt=""></mt-swipe-item>
+      <mt-swipe-item><img src="http://localhost:3000/img/ac001.jpg" alt=""></mt-swipe-item>
+      <mt-swipe-item><img src="http://localhost:3000/img/dmc001.jpg" alt=""></mt-swipe-item>
     </mt-swipe>
     <HelloWorld/>
     <GameList/>

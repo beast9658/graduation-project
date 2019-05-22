@@ -1,8 +1,8 @@
 <template>
   <div class="hello">
     <div class="act">
-      <div class="search" @click="toSearch()"><img src="../assets/logo.png" alt=""><p>搜索</p></div>
-      <div class="login" @click="toLogin()"><img src="../assets/logo.png" alt=""><p>登录</p></div>
+      <div class="search" @click="toSearch()"><img src="http://localhost:3000/img/search.jpg" alt=""><p>搜索</p></div>
+      <div class="login" @click="toLogin()"><img src="http://localhost:3000/img/login.jpg" alt=""><p>登录</p></div>
     </div>
   </div>
 </template>

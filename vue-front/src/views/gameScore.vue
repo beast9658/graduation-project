@@ -29,21 +29,22 @@ export default {
   },
   data () {
     return {
-      name:"4ds8a94d",
+      name:"admin",
       items: [
         {
-          title:"001",
+          title:"守望先锋 2019.05.19",
           k:"10",
           d:"10",
           a:"5",
-          src:"http://localhost:3000/img/logo.png",
+          src:"http://localhost:3000/img/owbanner.jpg",
           show:false
         },
         {
-          title:"0101",
-          k:"110",
-          d:"110",
-          a:"51",
+          title:"英雄联盟 2019.05.20",
+          k:"11",
+          d:"0",
+          a:"5",
+          src:"http://localhost:3000/img/lol001.jpg",
           show:false
         }
       ]

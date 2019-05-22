@@ -8,7 +8,7 @@
         <div class="banner-img"></div>
         <div class="banner-mes">
           <div>时间:{{ message.time }}</div>
-          <div>作者:{{ message.author }}{{ message.index }}</div>
+          <div>作者:{{ message.author }}</div>
           <div>tag:{{ message.tag }}</div>
         </div>
       </div>
@@ -52,8 +52,7 @@ export default {
   width: 50%;
   height: 0;
   padding-bottom: 50%;
-  background-color: yellow;
-  background-image: url(../assets/logo.png);
+  background-image: url(http://localhost:3000/img/1558513721184.png);
   background-repeat: no-repeat;
   background-size: 100%;
   position: relative;
@@ -67,9 +66,10 @@ export default {
   padding: 1rem;
 }
 .message {
-  background-color: coral;
   position: absolute;
   top: 30%;
   padding: 1rem 3rem;
+  font-size: 1.5rem;
+  color: blue;
 }
 </style>
