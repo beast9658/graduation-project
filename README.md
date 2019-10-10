@@ -1,1 +1,3 @@
-# graduation-project
+# 游戏资讯分享平台  
+
+vue前端+node后台学习练手
